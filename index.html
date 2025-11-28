@@ -16,13 +16,298 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <noscript>
-      Для просмотра наполненного опыта включите JavaScript или обновите
-      браузер.
-    </noscript>
-    <div id="root"></div>
+    <div class="cursor cursor--outer" aria-hidden="true"></div>
+    <div class="cursor cursor--inner" aria-hidden="true"></div>
 
-    <script type="module" src="app.js"></script>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">Flux Studio</div>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a href="#work" class="cursor-target">Работы</a>
+          <a href="#process" class="cursor-target">Процесс</a>
+          <a href="#studio" class="cursor-target">Студия</a>
+          <a href="#contact" class="btn ghost cursor-target">Контакт</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="theme-toggle cursor-target"
+            type="button"
+            aria-label="Переключить тему"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="icon icon--sun"></span>
+            <span class="icon icon--moon"></span>
+          </button>
+          <button
+            class="menu-trigger cursor-target"
+            type="button"
+            aria-label="Меню"
+            aria-expanded="false"
+            data-menu-toggle
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-panel aria-hidden="true">
+      <div class="mobile-menu__inner">
+        <button
+          class="mobile-menu__close cursor-target"
+          type="button"
+          aria-label="Закрыть меню"
+          data-menu-close
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <a href="#work" class="cursor-target">Работы</a>
+          <a href="#process" class="cursor-target">Процесс</a>
+          <a href="#studio" class="cursor-target">Студия</a>
+          <a href="#contact" class="cursor-target">Контакт</a>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-content container">
+          <p class="eyebrow">минимализм • свет • акцент</p>
+          <h1>
+            Дизайн, который заставляет остановиться и почувствовать момент.
+          </h1>
+          <p class="lead">
+            Мы создаём цифровой опыт с мягкими анимациями, чистым пространством
+            и интуитивной навигацией. Прокатитесь взглядом — курсор проведёт.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn primary cursor-target">Смотреть кейсы</a>
+            <a href="#contact" class="btn text cursor-target"
+              >Обсудить проект</a
+            >
+          </div>
+          <div class="hero-meta">
+            <span class="hero-chip cursor-target"
+              >UX • Motion • Digital Mindfulness</span
+            >
+            <ul class="hero-metrics">
+              <li>
+                <span>120+</span>
+                реализованных релизов
+              </li>
+              <li>
+                <span>72%</span>
+                клиентов приходят по рекомендации
+              </li>
+              <li>
+                <span>16</span>
+                стран в географии проектов
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-visual cursor-target" aria-hidden="true">
+          <div class="orb orb--accent"></div>
+          <div class="orb orb--neutral"></div>
+          <div class="grid"></div>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">От концепции до живых продуктов</p>
+            <h2>Свободное пространство для ярких идей</h2>
+          </div>
+          <div class="cards">
+            <article class="card cursor-target">
+              <div class="card-top">
+                <h3>Интерактивные лендинги</h3>
+                <span class="card-detail">3–5 недель • Motion + Story</span>
+              </div>
+              <p>
+                Мягкие переходы и микроанимации, которые сопровождают
+                пользователя по сюжету бренда.
+              </p>
+            </article>
+            <article class="card cursor-target">
+              <div class="card-top">
+                <h3>Дашборды и платформы</h3>
+                <span class="card-detail">6 недель • Product Ops</span>
+              </div>
+              <p>
+                Информационная архитектура без визуального шума и умный свет для
+                долгой работы.
+              </p>
+            </article>
+            <article class="card cursor-target">
+              <div class="card-top">
+                <h3>Иммерсивные кампании</h3>
+                <span class="card-detail">4 недели • WebGL Lite</span>
+              </div>
+              <p>
+                Кастомные эффекты с балансом производительности, которые
+                остаются плавными на любых устройствах.
+              </p>
+            </article>
+            <article class="card cursor-target">
+              <div class="card-top">
+                <h3>Design Ops сопровождение</h3>
+                <span class="card-detail">Подписка • Crew-as-a-service</span>
+              </div>
+              <p>
+                Встраиваемся в команду: подключаем систему компонентов, гайды и
+                тестовые сценарии.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="studio" class="section section--gallery">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Свежие визуальные истории</p>
+            <h2>Каждый проект как маленькая сцена света</h2>
+          </div>
+          <div class="gallery">
+            <figure class="gallery-card cursor-target">
+              <figcaption>
+                <span>Immersive retail</span>
+                Кинетика частиц и адаптивная сетка для fashion-дропа.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card cursor-target">
+              <figcaption>
+                <span>Wellness OS</span>
+                Дашборд с биометрией и мягкими окружностями данных.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card cursor-target">
+              <figcaption>
+                <span>Urban Atlas</span>
+                Городской гайд с темой дня/ночи и живым курсором.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section section--split">
+        <div class="container">
+          <div class="split-content">
+            <div>
+              <p class="eyebrow">Три шага к результату</p>
+              <h2>Прозрачный процесс и чёткие сроки</h2>
+              <p>
+                Соединяем исследование, дизайн-систему и микровзаимодействия,
+                чтобы каждый экран чувствовался живым, но не перегруженным.
+              </p>
+            </div>
+            <ul class="steps">
+              <li class="cursor-target">
+                <span>01</span>
+                <div>
+                  <strong>Диагностика</strong>
+                  <p>Аудит, сценарии, поведение.</p>
+                </div>
+              </li>
+              <li class="cursor-target">
+                <span>02</span>
+                <div>
+                  <strong>Система</strong>
+                  <p>Типографика, цвет, сетка, гайды взаимодействий.</p>
+                </div>
+              </li>
+              <li class="cursor-target">
+                <span>03</span>
+                <div>
+                  <strong>Реализация</strong>
+                  <p>Сборка с кастомным интерактивом и тестами.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--signals">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Сигналы студии</p>
+            <h2>Что сейчас в работе</h2>
+            <p class="lead">
+              Экспресс-программы, которые можно подключить отдельно от полного
+              проекта.
+            </p>
+          </div>
+          <div class="signal-grid">
+            <article class="signal-card cursor-target">
+              <header>
+                <span class="signal-status">Live</span>
+                <h3>Product reboot sprint</h3>
+              </header>
+              <p>7-дневный воркшоп с прототипом и user flow.</p>
+              <div class="signal-tags">
+                <span>UX</span>
+                <span>Strategy</span>
+              </div>
+            </article>
+            <article class="signal-card cursor-target">
+              <header>
+                <span class="signal-status">New</span>
+                <h3>Motion health-check</h3>
+              </header>
+              <p>Диагностика анимаций и рекомендации FPS-safe эффектов.</p>
+              <div class="signal-tags">
+                <span>Motion</span>
+                <span>Performance</span>
+              </div>
+            </article>
+            <article class="signal-card cursor-target">
+              <header>
+                <span class="signal-status">Waitlist</span>
+                <h3>Onboarding Lab</h3>
+              </header>
+              <p>
+                A/B сценарии и сервисный blueprint для команды, agenda заранее.
+              </p>
+              <div class="signal-tags">
+                <span>Growth</span>
+                <span>Service design</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--cta cursor-target">
+        <div class="container">
+          <h2>Пора оживить ваш проект</h2>
+          <p>
+            Оставьте заявку — вернёмся с концепцией и таймлайном в течение двух
+            дней. Первичный звонок бесплатно, agenda приходит заранее.
+          </p>
+          <a href="mailto:hello@flux.studio" class="btn primary cursor-target"
+            >hello@flux.studio</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2025 Flux Studio</span>
+        <span>Минимализм. Свет. Живой курсор.</span>
+        <span>React-free, performance-first</span>
+      </div>
+    </footer>
+
+    <script src="cursor.js" defer></script>
   </body>
 </html>
 
